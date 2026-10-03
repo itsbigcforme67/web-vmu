@@ -1,0 +1,14 @@
+diff --git a/lib/source/hw/evmu_cpu.c b/lib/source/hw/evmu_cpu.c
+index 7150d80..898eec3 100755
+--- a/lib/source/hw/evmu_cpu.c
++++ b/lib/source/hw/evmu_cpu.c
+@@ -219,8 +219,8 @@ static  EVMU_RESULT EvmuCpu_execute_(EvmuCpu* pSelf, const EvmuDecodedInstructio
+         p           |= (CY_EXP)? SFR_MSK(PSW, CY) : 0;      \
+         p           |= (AC_EXP)? SFR_MSK(PSW, AC) : 0;      \
+         p           |= (OV_EXP)? SFR_MSK(PSW, OV) : 0;      \
+-        WRITE(SFR(ACC), r);                                 \
+         WRITE(SFR(PSW), p);                                 \
++        WRITE(SFR(ACC), r);                                 \
+     } GBL_STMT_END
+ 
+     GBL_CTX_BEGIN(pSelf);

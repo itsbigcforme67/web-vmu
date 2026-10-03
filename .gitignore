@@ -1,0 +1,23 @@
+# Never publish other people's files: games, saves, memory cards and BIOS dumps stay out of the repository.
+*.vms
+*.vmi
+*.dci
+*.dcm
+*.bin
+*.vmu
+*.zip
+# ... except the test game written for this project (source in demo/sketch.s)
+!web/demo/sketch.vms
+esp32/data/cards/*
+!esp32/data/cards/README.txt
+
+# build output, editor files, local clutter
+tests/ref_trace
+tests/host_trace
+tests/clock_test
+.pio/
+.vscode/
+__pycache__/
+*.pyc
+shots/
+.DS_Store
